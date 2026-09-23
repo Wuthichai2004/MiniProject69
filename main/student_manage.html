@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>จัดการบัญชีนักศึกษา</title>
+
+    <link rel="stylesheet" href="student_manage.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+
+        <div>
+            <h2>♻️ ระบบสะสมแต้มการแยกขยะ</h2>
+            <p>จัดการบัญชีนักศึกษา</p>
+        </div>
+
+        <div>
+            <button
+                type="button"
+                class="back-btn"
+                onclick="location.href='../api/admin_dashboard.php'"
+            >
+                ← กลับหน้าหลัก
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="title-section">
+
+        <h1>จัดการบัญชีนักศึกษา</h1>
+
+        <p>
+            ตรวจสอบรายชื่อนักศึกษา ระงับ หรือปลดระงับบัญชี
+        </p>
+
+    </section>
+
+    <section class="table-card">
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>ชื่อ-นามสกุล</th>
+                        <th>ชื่อผู้ใช้</th>
+                        <th>สถานะ</th>
+                        <th>จัดการ</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable">
+
+                    <tr>
+                        <td colspan="5">
+                            กำลังโหลดข้อมูล...
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="student_manage.js"></script>
+
+</body>
+</html>

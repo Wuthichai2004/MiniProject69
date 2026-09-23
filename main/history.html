@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>คะแนนสะสมและประวัติ</title>
+
+    <link
+        rel="stylesheet"
+        href="history.css?v=2"
+    >
+    <link rel="stylesheet" href="theme.css?v=5">
+    <style>
+        /* Keep the header controls on the same vertical guides as the user card. */
+        .history-header .header-content {
+            width: min(92%, 1180px) !important;
+            max-width: 1180px !important;
+            margin: 0 auto !important;
+            padding: 0 26px !important;
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+        }
+
+        .history-header .back-btn {
+            width: auto !important;
+            margin-left: auto !important;
+            flex: 0 0 auto !important;
+        }
+
+        @media (max-width: 720px) {
+            .history-header .header-content {
+                padding: 0 20px !important;
+                flex-direction: column !important;
+                align-items: stretch !important;
+            }
+
+            .history-header .back-btn {
+                width: 100% !important;
+                margin-left: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="history-header">
+        <div class="header-content">
+            <div>
+                <h1>ระบบสะสมแต้มการแยกขยะ</h1>
+            </div>
+
+            <button type="button" class="back-btn" onclick="location.href='record_waste.html'">
+                ← กลับหน้าบันทึกขยะ
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="user-section">
+            <div>
+                <h2>
+                    ผู้ใช้งาน:
+                    <span id="fullname">กำลังโหลด...</span>
+                </h2>
+            </div>
+
+            <button
+                type="button"
+                onclick="loadHistory()"
+            >
+                รีเฟรชข้อมูล
+            </button>
+        </section>
+
+        <section class="score-card">
+            <p>คะแนนสะสมทั้งหมด</p>
+
+            <h2 id="totalPoints">0</h2>
+
+            <span>คะแนน</span>
+        </section>
+
+        <div
+            id="message"
+            class="message"
+        ></div>
+
+        <section>
+            <h2>ประวัติการแยกขยะ</h2>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>รหัสรายการ</th>
+                            <th>ประเภทขยะ</th>
+                            <th>จำนวน</th>
+                            <th>คะแนนต่อหน่วย</th>
+                            <th>คะแนนที่ได้รับ</th>
+                            <th>รูปภาพ</th>
+                            <th>สถานะ</th>
+                            <th>วันที่บันทึก</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="historyTableBody">
+                        <tr>
+                            <td colspan="8">
+                                กำลังโหลดข้อมูล...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="history.js"></script>
+</body>
+</html>

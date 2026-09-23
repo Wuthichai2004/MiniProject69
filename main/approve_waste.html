@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>ตรวจสอบรายการแยกขยะ</title>
+
+    <link
+        rel="stylesheet"
+        href="approve_waste.css?v=2"
+    >
+    <link rel="stylesheet" href="theme.css?v=6">
+    <style>
+        .approve-header .header-content {
+            width: min(92%, 1180px) !important;
+            max-width: 1180px !important;
+            margin: 0 auto !important;
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            gap: 24px;
+            text-align: left;
+        }
+
+        .approve-header h1 {
+            margin: 0;
+        }
+
+        .approve-header .back-btn {
+            width: auto !important;
+            margin-left: auto !important;
+            flex: 0 0 auto !important;
+        }
+
+        @media (max-width: 720px) {
+            .approve-header .header-content {
+                flex-direction: column !important;
+                align-items: stretch !important;
+            }
+
+            .approve-header .back-btn {
+                width: 100% !important;
+                margin-left: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="approve-header">
+    <div class="header-content">
+        <div>
+            <h1>ตรวจสอบรายการแยกขยะ</h1>
+        </div>
+
+        <button type="button" class="back-btn" onclick="location.href='../api/admin_dashboard.php'">
+            ← กลับหน้าหลัก
+        </button>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="top-bar">
+        <h2>รายการรออนุมัติ</h2>
+
+        <button
+            type="button"
+            onclick="loadPendingRecords()"
+        >
+            รีเฟรช
+        </button>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>รหัส</th>
+                    <th>นักศึกษา</th>
+                    <th>ประเภทขยะ</th>
+                    <th>จำนวน</th>
+                    <th>คะแนนต่อหน่วย</th>
+                    <th>คะแนนรวม</th>
+                    <th>รูปหลักฐาน</th>
+                    <th>วันที่ส่ง</th>
+                    <th>จัดการ</th>
+                </tr>
+            </thead>
+
+            <tbody id="recordBody">
+                <tr>
+                    <td colspan="9">
+                        กำลังโหลดข้อมูล...
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</main>
+
+<script src="approve_waste.js?v=2"></script>
+
+</body>
+</html>

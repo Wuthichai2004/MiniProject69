@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>จัดการข้อมูลพื้นฐาน</title>
+
+    <link rel="stylesheet"
+          href="manage_waste.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="header-content">
+
+            <div>
+                <h2>♻️ ระบบสะสมแต้มการแยกขยะ</h2>
+
+                <p>
+                    Process 3 : จัดการข้อมูลพื้นฐาน
+                </p>
+            </div>
+
+            <div class="header-actions">
+                <button type="button" class="back-btn" onclick="location.href='../api/admin_dashboard.php'">
+                    ← กลับหน้าหลัก
+                </button>
+
+                <button
+                    class="logout-btn"
+                    onclick="logout()">
+
+                    ออกจากระบบ
+
+                </button>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+    <main>
+
+        <!-- หัวข้อ -->
+        <section class="title-section">
+
+            <h1>
+                จัดการข้อมูลประเภทขยะ
+            </h1>
+
+            <p>
+                เพิ่ม แก้ไข ลบ และกำหนดคะแนนของแต่ละประเภทขยะ
+            </p>
+
+        </section>
+
+
+        <!-- ฟอร์มเพิ่มข้อมูล -->
+        <section class="form-card">
+
+            <h2>
+                เพิ่มประเภทขยะ
+            </h2>
+
+            <form id="wasteForm">
+
+                <div class="form-group">
+
+                    <label for="wasteName">
+                        ประเภทขยะ
+                    </label>
+
+                    <input
+                        type="text"
+                        id="wasteName"
+                        placeholder="เช่น ขวดพลาสติก"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="points">
+                        คะแนนต่อหน่วย
+                    </label>
+
+                    <input
+                        type="number"
+                        id="points"
+                        placeholder="เช่น 5"
+                        min="1"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="add-btn">
+
+                    + เพิ่มประเภทขยะ
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ตารางข้อมูล -->
+        <section class="table-card">
+
+            <div class="table-header">
+
+                <div>
+                    <h2>
+                        รายการประเภทขยะ
+                    </h2>
+
+                    <p>
+                        ข้อมูลจากฐานข้อมูล MySQL
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                ลำดับ
+                            </th>
+
+                            <th>
+                                ประเภทขยะ
+                            </th>
+
+                            <th>
+                                คะแนนต่อหน่วย
+                            </th>
+
+                            <th>
+                                จัดการ
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="wasteTable">
+
+                        <!-- JavaScript จะนำข้อมูลมาแสดงตรงนี้ -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="manage_waste.js"></script>
+
+</body>
+
+</html>

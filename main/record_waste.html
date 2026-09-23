@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>บันทึกการแยกขยะ | ระบบสะสมแต้มการแยกขยะ</title>
+
+    <link rel="stylesheet" href="record_waste.css">
+    <link rel="stylesheet" href="theme.css">
+
+    <script>
+        if (
+            location.protocol === "file:" ||
+            (location.port && location.port !== "80") ||
+            !location.pathname.startsWith("/MiniProject69/")
+        ) {
+            location.replace("http://localhost/MiniProject69/main/record_waste.html");
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+
+        <div>
+            <h2>♻️ ระบบสะสมแต้มการแยกขยะ</h2>
+        </div>
+
+        <div class="user-actions">
+
+            <span id="currentUser"></span>
+
+            <button
+                type="button"
+                class="history-btn"
+                onclick="location.href='history.html'">
+                📊 ดูคะแนนและประวัติ
+            </button>
+
+            <button
+                type="button"
+                class="logout-btn"
+                onclick="logout()">
+                ออกจากระบบ
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="title-section">
+
+        <h1>บันทึกการแยกขยะ</h1>
+
+        <p>
+            กรอกข้อมูลขยะที่นำมาแยก
+            ระบบจะส่งรายการให้เจ้าหน้าที่ตรวจสอบก่อนอนุมัติคะแนน
+        </p>
+
+    </section>
+
+    <section class="form-card">
+
+        <h2>เพิ่มรายการแยกขยะ</h2>
+
+        <form
+            id="wasteRecordForm"
+            enctype="multipart/form-data">
+
+            <div class="form-group">
+
+                <label for="waste_id">
+                    ประเภทขยะ
+                </label>
+
+                <select
+                    id="waste_id"
+                    name="waste_id"
+                    required>
+
+                    <option value="">
+                        -- เลือกประเภทขยะ --
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="quantity">
+                    จำนวน
+                    <span>(หน่วย)</span>
+                </label>
+
+                <input
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    min="1"
+                    step="1"
+                    placeholder="กรอกจำนวน"
+                    required>
+
+            </div>
+
+            <div
+                id="pointsEstimate"
+                class="points-estimate"
+                hidden>
+
+                คะแนนที่คาดว่าจะได้รับ
+
+                <strong id="estimatedPoints">
+                    0
+                </strong>
+
+                คะแนน
+
+                <small>
+                    คะแนนจริงจะได้รับหลังเจ้าหน้าที่อนุมัติ
+                </small>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="image">
+                    รูปภาพหลักฐาน
+                    <span>
+                        (JPG, PNG หรือ WebP ไม่เกิน 5 MB)
+                    </span>
+                </label>
+
+                <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    accept="image/jpeg,image/png,image/webp">
+
+            </div>
+
+            <div
+                id="imagePreview"
+                class="image-preview">
+            </div>
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                บันทึกการแยกขยะ
+
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<script src="record_waste.js"></script>
+
+</body>
+</html>

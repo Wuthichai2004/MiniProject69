@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>รายงานข้อมูล</title>
+
+    <link
+        rel="stylesheet"
+        href="report.css"
+    >
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-content">
+
+        <div>
+            <h2>
+                ♻️ ระบบสะสมแต้มการแยกขยะ
+            </h2>
+
+        </div>
+
+        <button
+            type="button"
+            class="back-btn"
+            onclick="location.href='../api/admin_dashboard.php'"
+        >
+            ← กลับหน้าหลัก
+        </button>
+
+    </div>
+
+</header>
+
+<main class="container">
+
+    <section class="title-section">
+
+        <h1>
+            📊 รายงานข้อมูลภาพรวม
+        </h1>
+
+        <p>
+            สรุปข้อมูลการแยกขยะและคะแนนสะสมภายในระบบ
+        </p>
+
+    </section>
+
+    <!-- Summary Cards -->
+
+    <section class="summary-grid">
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                📝
+            </div>
+
+            <p>
+                รายการทั้งหมด
+            </p>
+
+            <h2 id="totalRecords">
+                0
+            </h2>
+
+        </div>
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                ⏳
+            </div>
+
+            <p>
+                รอตรวจสอบ
+            </p>
+
+            <h2 id="pendingRecords">
+                0
+            </h2>
+
+        </div>
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                ✅
+            </div>
+
+            <p>
+                อนุมัติแล้ว
+            </p>
+
+            <h2 id="approvedRecords">
+                0
+            </h2>
+
+        </div>
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                ❌
+            </div>
+
+            <p>
+                ไม่อนุมัติ
+            </p>
+
+            <h2 id="rejectedRecords">
+                0
+            </h2>
+
+        </div>
+
+        <div class="summary-card score">
+
+            <div class="summary-icon">
+                ⭐
+            </div>
+
+            <p>
+                คะแนนที่แจกทั้งหมด
+            </p>
+
+            <h2 id="totalPoints">
+                0
+            </h2>
+
+        </div>
+
+    </section>
+
+    <div
+        id="message"
+        class="message"
+    ></div>
+
+    <!-- รายงานประเภทขยะ -->
+
+    <section class="report-card">
+
+        <h2>
+            สรุปตามประเภทขยะ
+        </h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>ประเภทขยะ</th>
+                        <th>คะแนน/หน่วย</th>
+                        <th>จำนวนรายการ</th>
+                        <th>จำนวนขยะรวม</th>
+                        <th>คะแนนรวม</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="wasteReportBody">
+
+                    <tr>
+                        <td colspan="6">
+                            กำลังโหลดข้อมูล...
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- คะแนนนักศึกษา -->
+
+    <section class="report-card">
+
+        <h2>
+            🏆 อันดับคะแนนนักศึกษา
+        </h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>อันดับ</th>
+                        <th>ชื่อนักศึกษา</th>
+                        <th>จำนวนรายการ</th>
+                        <th>คะแนนสะสม</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentReportBody">
+
+                    <tr>
+                        <td colspan="4">
+                            กำลังโหลดข้อมูล...
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="report.js"></script>
+
+</body>
+
+</html>

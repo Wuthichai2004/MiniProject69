@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7f5;
+}
+
+header {
+    padding: 25px;
+    text-align: center;
+    background: #2e7d32;
+    color: white;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-bar button {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 6px;
+    background: #1565c0;
+    color: white;
+    cursor: pointer;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #e8f5e9;
+}
+
+.approve-btn,
+.reject-btn {
+    padding: 8px 12px;
+    margin: 3px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.approve-btn {
+    background: #2e7d32;
+}
+
+.reject-btn {
+    background: #c62828;
+}
+
+.message {
+    display: none;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.message.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.evidence-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: #1f6048;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.evidence-image {
+    display: block;
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border: 2px solid #dff3e8;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(26, 75, 56, 0.12);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.evidence-link:hover .evidence-image {
+    transform: scale(1.05);
+    box-shadow: 0 9px 22px rgba(26, 75, 56, 0.2);
+}
+
+.no-evidence {
+    color: #788981;
+    font-size: 13px;
+    white-space: nowrap;
+}

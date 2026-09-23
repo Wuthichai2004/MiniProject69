@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>สมัครสมาชิก | ระบบสะสมแต้มการแยกขยะ</title>
+
+    <link
+        rel="stylesheet"
+        href="register.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+    <header>
+        <div class="header-content">
+
+            <div class="logo">
+
+                <h2>
+                    ♻️ ระบบสะสมแต้มการแยกขยะ
+                </h2>
+
+                <p>
+                    ระบบบันทึกการแยกขยะและสะสมคะแนน
+                </p>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         Main
+    ========================== -->
+
+    <main>
+
+        <section class="register-card">
+
+            <!-- หัวข้อ -->
+
+            <div class="title-section">
+
+                <div class="icon">
+                    👤
+                </div>
+
+                <h1>
+                    สมัครสมาชิก
+                </h1>
+
+                <p>
+                    กรุณากรอกข้อมูลเพื่อสร้างบัญชีผู้ใช้งาน
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 Register Form
+            ========================== -->
+
+            <form id="registerForm">
+
+
+                <!-- ชื่อ-นามสกุล -->
+
+                <div class="form-group">
+
+                    <label for="fullname">
+                        ชื่อ-นามสกุล
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="กรอกชื่อ-นามสกุล"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Username -->
+
+                <div class="form-group">
+
+                    <label for="username">
+                        ชื่อผู้ใช้
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="กรอกชื่อผู้ใช้"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        รหัสผ่าน
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="กรอกรหัสผ่าน"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- =========================
+                     ประเภทสมาชิก
+                ========================== -->
+
+                <div class="form-group" hidden>
+
+                    <label for="role">
+                        ประเภทสมาชิก
+                    </label>
+
+                    <select
+                        id="role"
+                        name="role"
+                        hidden
+                        required
+                    >
+
+                        <option value="student" selected>
+                            นักศึกษา
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ปุ่มสมัครสมาชิก -->
+
+                <button
+                    type="submit"
+                    class="register-btn"
+                >
+                    สมัครสมาชิก
+                </button>
+
+            </form>
+
+
+            <!-- =========================
+                 Login Link
+            ========================== -->
+
+            <div class="login-link">
+
+                <span>
+                    มีบัญชีอยู่แล้ว?
+                </span>
+
+                <a href="login.html">
+                    เข้าสู่ระบบ
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="register.js"></script>
+
+</body>
+
+</html>

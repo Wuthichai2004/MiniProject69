@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8f5;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px 5%;
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    color: #2e7d32;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #777777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   Logout
+========================= */
+
+.logout-btn {
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #f44336;
+    color: white;
+
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: #d32f2f;
+}
+
+
+/* =========================
+   Main
+========================= */
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+/* =========================
+   Title
+========================= */
+
+.title-section {
+    margin-bottom: 25px;
+}
+
+.title-section h1 {
+    margin-bottom: 8px;
+}
+
+.title-section p {
+    color: #777777;
+}
+
+
+/* =========================
+   Card
+========================= */
+
+.form-card,
+.table-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.form-card h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: #4caf50;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(76, 175, 80, 0.1);
+}
+
+
+/* =========================
+   Add Button
+========================= */
+
+.add-btn {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4caf50;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #43a047;
+}
+
+
+/* =========================
+   Table
+========================= */
+
+.table-header {
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    margin-bottom: 5px;
+}
+
+.table-header p {
+    color: #777777;
+    font-size: 14px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 600px;
+}
+
+th,
+td {
+    padding: 15px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    text-align: left;
+}
+
+th {
+    background: #f5f9f5;
+
+    color: #333333;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* =========================
+   Action Button
+========================= */
+
+.edit-btn {
+    padding: 7px 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #ff9800;
+
+    color: white;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+}
+
+.edit-btn:hover {
+    background: #f57c00;
+}
+
+
+.delete-btn {
+    padding: 7px 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #f44336;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #d32f2f;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    .header-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    main {
+        margin-top: 25px;
+    }
+
+    .form-card,
+    .table-card {
+        padding: 20px;
+    }
+
+}
